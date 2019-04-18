@@ -20,4 +20,5 @@ return [
     'posts' => 'Posts',
     'no_posts' => 'no posts written so far...',
     'you' => 'You',
+    'users' => 'Users',
 ];

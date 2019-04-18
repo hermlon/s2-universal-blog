@@ -37,4 +37,8 @@ class User extends Authenticatable
     public function owns(Post $post) {
       return $this->id == $post->user_id;
     }
+
+    public function isAdmin() {
+      return $this->admin;
+    }
 }

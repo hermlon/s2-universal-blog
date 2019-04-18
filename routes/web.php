@@ -29,3 +29,8 @@ Route::delete('posts/{post}', 'PostController@destroy');
 Route::get('users/{user}', 'UserController@show');
 
 //Route::get('user/{id}', 'PostController@index');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
+    Route::redirect('', 'admin/users');
+    Route::get('users', 'UserController@index');
+    Route::post('users', 'UserController@store');
+});
