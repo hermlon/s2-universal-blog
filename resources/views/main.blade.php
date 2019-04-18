@@ -2,6 +2,11 @@
 
 @section('content')
 
+  <nav class="navbar navbar-light navbar-white">
+    <a title="News" aria-label="News" class="nav-item nav-link active" href=""><i class="fas fa-newspaper fa-2x nav-icon"></i><span class="nav-text">News</span></a>
+    <a class="nav-item nav-link active" href=""><i class="fas fa-calendar-alt fa-2x nav-icon"></i><span class="nav-text">Events</span></a>
+  </nav>
+
   @if (Auth::check())
     <form method="POST" action="{{ action('PostController@store') }}">
       @csrf
